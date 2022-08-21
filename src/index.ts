@@ -13,11 +13,12 @@ if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
+let mainWindow = null;
 const createWindow = (): void => {
   const factor = screen.getPrimaryDisplay().scaleFactor;
 
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
+   mainWindow = new BrowserWindow({
     height: 720 / factor,
     width: 1280 / factor,
     webPreferences: {
@@ -48,7 +49,15 @@ app.on("window-all-closed", () => {
 });
 
 ipcMain.on('general-actions', (msg, args) => {
-  console.log(args)  
+  if (typeof args === "string") {
+    switch(args) {
+      case "minimize":
+        break;
+
+      case 'close':
+        break;
+    }
+  } 
 })
 
 app.on("activate", () => {
