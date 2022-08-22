@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+const { ipc } = window.odpexp;
+
 const HomeScreen: React.FunctionComponent = (props) => {
     useEffect(() => {
     }, [])

@@ -5,7 +5,7 @@
   "description": "My Electron application description",
   "main": ".webpack/main",
   "scripts": {
-    "start": "nodemon --watch src/index.ts --exec \"electron-forge start\"",
+    "start": "nodemon --watch src/backend/index.ts --exec \"electron-forge start\"",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
@@ -56,7 +56,7 @@
                   "js": "./src/renderer.tsx",
                   "name": "main_window",
                   "preload": {
-                    "js": "./src/preload.ts"
+                    "js": "./src/backend/preload.ts"
                   }
                 }
               ]

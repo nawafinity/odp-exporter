@@ -7,14 +7,14 @@ import { ipcRenderer, contextBridge, IpcRenderer  } from "electron"; // eslint-d
 declare global {
     interface Window {
       odpexp: {
-        icp: IpcRenderer
+        ipc: IpcRenderer
       }
     }
   }
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 contextBridge.exposeInMainWorld('odpexp', {
-    icp: ipcRenderer
+    ipc: ipcRenderer
 })
 /* eslint-enable */
 
