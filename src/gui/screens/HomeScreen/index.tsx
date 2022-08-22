@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const HomeScreen: React.FunctionComponent = (props) => {
-    console.log(props)
+    useEffect(() => {
+    }, [])
+
     return (
         <div>
             Home Screen

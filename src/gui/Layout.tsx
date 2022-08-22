@@ -54,12 +54,12 @@ class Layout extends React.Component<LayoutProps, LayoutStates> {
             <button className="bp4-button bp4-minimal bp4-icon-style"></button>
             <span className="bp4-navbar-divider"></span>
             <button
-              className="bp4-button bp4-minimal bp4-icon-cross"
-              onClick={this.close}
-            ></button>
-            <button
               className="bp4-button bp4-minimal bp4-icon-minus"
               onClick={this.minimize}
+            ></button>
+            <button
+              className="bp4-button bp4-minimal bp4-icon-cross"
+              onClick={this.close}
             ></button>
           </div>
         </nav>{" "}
